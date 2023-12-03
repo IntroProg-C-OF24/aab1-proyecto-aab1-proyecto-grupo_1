@@ -27,15 +27,15 @@ public class Propuesta_1 {
                 System.out.println("Name Student: "+ name + " with ced: "+ced +" is APPROVED");
                 contApp++;
             }else{
-                System.out.println("Name Student: "+ name + "with ced: "+ced +" is NOT APPROVED");
+                System.out.println("Name Student: "+ name + "with ced:a "+ced +" is NOT APPROVED");
                 contRep++;
             }
             System.out.println("______________________________________");
             System.out.println("Do you want to enter one more student?");
             condition=dato.next().toLowerCase();
         } while (("s").equals(condition));
-        percentApp=((contApp*100)/(contApp+contRep));
-        percentRep=((contApp*100)/(contApp+contRep));
+        percentApp=((contApp*100)/(contRep+contApp));
+        percentRep=((contRep*100)/(contRep+contApp));
         System.out.println("______________________________________________");
         System.out.println("The percentage of students approved is: "+percentApp+"%");
         System.out.println("The percentage of students not approved is: "+percentRep+"%");
